@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .outer{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            /* border: 3px;
+            border-color: purple; */
+            border: 3px solid purple;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .red{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: lightpink;
+        }
+        .green{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: lightgreen;
+        }
+        .blue{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: lightblue;
+        }
+        div{
+            border-color: chartreuse;
+        }
+        .color-area{
+            border: 1px solid gray;
+            height: 100px;
+            width: 100px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+    </style>
+    <div class="outer">
+        <div class ="red"></div>
+        <div class ="green"></div>
+        <div class ="blue"></div>
+    </div>
+    <div class="color-area"></div>
+
+    <script>
+        let colorArea=document.querySelector(".color-area");
+        let redS=document.querySelector(".red");
+        let greenS=document.querySelector(".green");
+        let blueS=document.querySelector(".blue");
+
+        let gcolor="black";        
+        redS.addEventListener("click",function(e){
+            gcolor="lightpink";
+            colorArea.style.backgroundColor = gcolor;
+            // console.log(gcolor);
+        })
+        greenS.addEventListener("click",function(e){
+            gcolor="lightgreen";
+            colorArea.style.backgroundColor = gcolor;
+            // console.log(gcolor);
+        })
+        blueS.addEventListener("click",function(e){
+            gcolor="lightblue";
+            colorArea.style.backgroundColor = gcolor;
+            // console.log(gcolor);
+        })
+
+        // colorArea.style.backgroundColor = gcolor;  // click function ke andar hi change hoga
+        // console.log(gcolor);
+
+    </script>
+
+</body>
+</html>
